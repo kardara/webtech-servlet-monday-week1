@@ -1,94 +1,127 @@
+Got it ✅ You want two things in the README:
+
+1. **Assignment 1 (what you already did in class)** → calculator with 3 numbers, sum, check even/odd.
+2. **Assignment 2 (new, a bit more challenging but still related)** → something that builds on the same logic, so they practice deeper.
+
+Here’s the refined README:
+
+````markdown
 # 📘 Java Servlet Course – Week 1 Recap  
 
 ## ✅ What We Covered Today  
 
 ### 1. Introduction to Servlets  
-
 - Servlets are Java programs that handle **dynamic web content**.  
 - They run inside a **web container** (e.g., Tomcat).  
-- Static resources (HTML, CSS, images) are served directly, while dynamic requests are processed by servlets.  
-- **web.xml** → configuration file for servlet mappings (URL patterns).  
+- **Static content** (HTML, CSS, images) is delivered directly, while **dynamic requests** are processed by servlets.  
+- **web.xml** → maps URL patterns to servlets.  
 
 ---
 
 ### 2. Eclipse IDE and Tomcat Setup  
-
-- We configured **Eclipse** with **Apache Tomcat** to run and test servlets.  
+- Configured **Eclipse IDE** with **Apache Tomcat**.  
+- Built and tested servlets in a **Dynamic Web Project**.  
 
 ---
 
 ### 3. Servlet Web Project  
-
-- Created a **Dynamic Web Project**.  
-- Added an **index.html** form to interact with the servlet.  
-- Learned how **action** and **method (GET/POST)** work in forms.  
+- Created an **index.html** form to send input to servlets.  
+- Learned how **action** defines the target servlet and **method (GET/POST)** defines how data is sent.  
 
 ---
 
 ### 4. Creating a Servlet  
-
-- Extend `HttpServlet` class.  
-- Use `doGet()` and `doPost()` methods to handle requests.  
-- Retrieve form data with `HttpServletRequest`.  
-- Send back responses with `HttpServletResponse` using `PrintWriter`.  
+- Extend `HttpServlet`.  
+- Override `doGet()` and/or `doPost()` methods.  
+- Use:  
+  - `HttpServletRequest` → read form data.  
+  - `HttpServletResponse` → write output to the browser.  
+- Example: `PrintWriter out = response.getWriter();`  
 
 ---
 
 ### 5. HTTP Methods Overview  
-
 - **GET** → fetch data  
 - **POST** → send data  
-- **PUT** → update entire record  
-- **DELETE** → remove data  
-- **HEAD** → fetch headers only  
+- **PUT** → update  
+- **DELETE** → remove  
+- **HEAD** → retrieve headers  
 - **PATCH** → partial update  
-- **CONNECT** → create connection tunnel  
+- **CONNECT** → open tunnel  
 - **TRACE** → echo request (debugging)  
-- **OPTIONS** → show available methods  
+- **OPTIONS** → list available methods  
 
 ---
 
 ### 6. RequestDispatcher  
-
-- Forwards a request to another servlet or page (separating logic from presentation).  
+- Forward a request from one servlet to another servlet/JSP/HTML.  
+- Useful to separate **logic** (servlet) and **presentation** (JSP/HTML).  
 
 ---
 
-## 📝 Assignment – Mini Calculator  
+## 📝 Class Assignment (Recap – What We Did in Class)  
 
-Create a simple **Calculator Servlet** with the following:  
+We created a **Mini Calculator**:  
 
 ### Form (index.html)  
-
-- Input: First Number (number)  
-- Input: Second Number (number)  
-- Input: Third Number (number)  
+- Input: First Number  
+- Input: Second Number  
+- Input: Third Number  
 
 ### Servlet (CalculatorServlet.java)  
+- Add the three numbers.  
+- Print the result.  
+- Check whether the sum is **even or odd**.  
 
-- Add the three numbers together.  
-- Display the result.  
-- Check if the sum is **even** or **odd**.  
-
-### Example Output  
-
+#### Example Output  
 ```txt
 The result is 3 and it is an odd number
 ````
 
 ---
 
+## 📝 Assignment (New Challenge – Due in 3 Days)
+
+Extend your knowledge with a slightly more complex project:
+
+### Task – Advanced Calculator with Age Check
+
+1. Create a form with:
+
+   * First Number
+   * Second Number
+   * Age
+
+2. In the servlet:
+
+   * Compute the **sum** of the two numbers.
+   * Check if the **sum > 100** → display `"Big number!"`.
+   * Otherwise, display `"Small number!"`.
+   * Add an **age check**:
+
+     * If age ≥ 18 → `"You are adult"`
+     * Else → `"You are minor"`
+
+#### Example Output
+
+```txt
+The result is 120 → Big number!
+You are adult.
+```
+
+---
+
 ## 📌 Submission Guidelines
 
 1. Push your code to **GitHub**.
-2. Ensure your repository is **private**.
+2. Make sure your repository is **private**.
 
-   - ⚠️ Any public repository will automatically receive a **score of 0**.
-3. Add a **screenshot** of the form and the output in your repo.
+   * ⚠️ Any **public repository** will automatically receive a **score of 0**.
+3. Add a **screenshot of your form and output** in the repo.
 4. Add us as collaborators:
 
-   - **My GitHub username:** `kardara`
-   - **Teacher Patrick’s username:** `dushimimanapatrick@gmail.com`
+   * **My GitHub username:** `kardara`
+   * **Teacher Patrick’s username:** `dushimimanapatrick@gmail.com`
 
 📎 A link to submit your repo will be provided.
 
@@ -96,4 +129,4 @@ The result is 3 and it is an odd number
 
 ### 📅 Deadline
 
-**Due in 3 days – Sunday at 6:00 PM**
+**Due in 3 days – Thursday at 1:00 AM (just after midnight).**
