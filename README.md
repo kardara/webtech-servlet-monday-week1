@@ -130,4 +130,4 @@ You are adult.
 
 ### 📅 Deadline
 
-**Due in 3 days – Thursday at 1:00 AM (just after midnight).**
+**Due in 3 days – Sunday at 6:00 PM**
